@@ -1,15 +1,27 @@
+# Arvin's Security & Automation Workspace
 
-# Automated Firewall Threat Hunting Pipeline
+Welcome to my repository showcasing Python tools built for security analytics, threat hunting, and log parsing.
 
-## Project Overview
-An automated Python pipeline leveraging the **Pandas** library to ingest, parse, and analyze raw JSON network firewall telemetry. The tool bypasses basic threshold indicators to isolate high-risk security incidents from background network noise.
+## 📁 Projects Index
+1. **[Threat Hunting Pipeline](#1-threat-hunting-pipeline)** - Parsers for network traffic logs to flag malicious indicators.
 
-## Threats Detected
-* **Reconnaissance Identification:** Effectively mapped inbound brute-force/port-scanning behavior by aggregating and counting firewall `DENY` actions mapped to unique source IPs.
+2. **[VESPA Mock Booking Tool]
+(#2-vespa-mock-booking-tool)** - A stateful global distribution system (GDS) emulator designed for terminal workflow familiarization.
 
-* **Data Exfiltration Flags:** Isolated unauthorized data egress vectors by filtering connection payloads exceeding high-volume thresholds (5MB+ bytes transferred).
+---
 
-## Technical Environment
-* **OS:** Linux Ubuntu/Debian environment
-* **Dependency Management:** Isolated Python virtual environments (`venv`)
-* **Core Libraries:** Pandas, NumPy
+## 1. Threat Hunting Pipeline
+* **File:** `sec_scripts/threat_hunt.py`
+* **Description:** Automates the ingestion of `network_logs.json` to detect unauthorized connection attempts or data exfiltration markers.
+
+### How to Run:
+```bash
+python3 sec_scripts/threat_hunt.py
+
+## 2. Vespa Mock Booking Tool
+* **File:** `projects_py/vespa.py`
+* **Description:** An advanced terminal emulator mimicking corporate passenger reservation tools. It tracks changes in an isolated session memory buffer, enforces business logic checks (like blocking unpaid updates or limiting cash refunds), and processes transactional commits (.io)
+
+### How to Run:
+```bash
+python3 projects_py/vespa.py
