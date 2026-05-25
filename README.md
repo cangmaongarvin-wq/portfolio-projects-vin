@@ -15,6 +15,7 @@ Welcome to my repository showcasing Python tools built for data processing, log 
 ### How to Run:
 ```bash
 python3 sec_scripts/threat_hunt.py
+```
 
 ---
 
@@ -31,3 +32,4 @@ python3 sec_scripts/threat_hunt.py
 ### How to Run:
 ```bash
 python3 projects_py/vespa.py
+```
