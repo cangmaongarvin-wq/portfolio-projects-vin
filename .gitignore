@@ -5,3 +5,5 @@
 # Untrack local scripts from GitHub
 projects_py/vespa.py
 sec_projects/threat_hunt.py
+test.py
+test_2.py
