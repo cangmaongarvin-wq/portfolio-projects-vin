@@ -3,7 +3,7 @@
 Welcome to my repository showcasing Python tools built for data processing and log analytics.
 
 ## 📁 Projects Index
-1. **[Network Traffic Analytics](#1-network-traffic-analytics)** - An automated data-enrichment and risk-profiling pipeline for network security logs.
+1. **[Network Traffic Analytics](#1-network-traffic-analytics)** - Exploratory analysis of network intrusion logs using pandas — built to practice security-focused data analysis.
 
 ---
 
