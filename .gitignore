@@ -1,2 +1,7 @@
+# Ignore python virtual environments
+.sec_env/
+.venv/
+
+# Untrack local scripts from GitHub
 projects_py/vespa.py
 sec_projects/threat_hunt.py
