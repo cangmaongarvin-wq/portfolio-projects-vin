@@ -1,18 +1,14 @@
-# Ignore python virtual environments
+# Virtual environments
 .sec_env/
 .venv/
 
-# Untrack specific local scripts
-projects_py/
+# Scratch files
 test.py
 test_2.py
 
-# Ignore general study and practice folders
-data_manipulation_pd.py
-img_/
-intermediate_python/
-intro_numpy/
-join_data_py/
-npy_img/
-project_vids/
-sec_projects/threat_hunt.py
+# Learning and exercise folders (local only)
+learning/
+exercises/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
