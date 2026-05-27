@@ -1,21 +1,102 @@
-# Arvin's Python Projects Workspace
+# Arvin's Cybersecurity Data Science Portfolio
 
-Welcome to my repository showcasing Python tools built for data processing and log analytics.
-
-## 📁 Projects Index
-1. **[Network Traffic Analytics](#1-network-traffic-analytics)** - Exploratory analysis of network intrusion logs using pandas — built to practice security-focused data analysis.
+A growing collection of data analysis and cybersecurity projects built using Python.
+This repository documents my journey toward becoming a Cybersecurity Data Scientist,
+with projects developed alongside my Data Analytics training on DataCamp.
 
 ---
 
-## 1. Network Traffic Analytics
-* **File:** `sec_projects/net_analysis.py`
-* **Description:** A pandas-driven security analytics engine designed to ingest raw transactional network logs, isolate anomalous indicators, and prioritize high-risk connections using multi-tiered logical conditions.
+## 📁 Repository Structure
 
-### 🚀 Key Technical Features:
-* **Log Enrichment:** Dynamically calculates localized tracking arrays, separating internal assets from external infrastructure vectors and automatically mapping throughput volumes into comparative classifications (`large` vs. `small`).
-* **Compound Threat Risk Profiling:** Pairs security exceptions with structural country codes to instantly triage alerts, filtering high-threat anomalies by data-exfiltration weights.
-* **Asset Behavioral Aggregation:** Leverages deep group-by matrices to cross-examine individual source IPs, creating operational baselines for internal assets based on asymmetric traffic sizes and historic alert volumes.
+```
+portfolio-projects-vin/
+│
+├── portfolio/                        # Polished project notebooks
+│   ├── 01_network_log_analysis/
+│   │   ├── network_log_analysis.ipynb
+│   │   └── data/
+│   │       └── network_logs.csv
+│   └── ... (more projects coming)
+│
+├── README.md
+└── requirements.txt
+```
 
-### How to Run:
-```bash
-python3 sec_projects/net_analysis.py
+---
+
+## 📊 Projects
+
+### 1. Network Intrusion Log Analysis
+> Exploratory data analysis of synthetic network logs using pandas — built to practice security-focused data analysis.
+
+| | |
+|---|---|
+| **Notebook** | `portfolio/network_log_analysis.ipynb` |
+| **Dataset** | Synthetic network log (20 events, 8 features) |
+| **Tools** | Python, pandas, numpy, Jupyter |
+
+**What this project covers:**
+- Inspecting and summarizing a network log dataset
+- Flagging suspicious traffic using new computed columns
+- Classifying events by traffic size and risk level using `np.where()`
+- Filtering and sorting high-risk connections
+- Aggregating traffic patterns by source IP, protocol, and country
+- Targeted row and column selection using `.loc` and `.iloc`
+
+**Key Findings:**
+- 7 out of 20 events triggered security alerts, all involving external destinations
+- `10.0.0.5` and `10.0.0.99` were the highest-alert source IPs
+- All high-risk events involved traffic routed to Russia (`RU`) with large payloads
+- TCP traffic consistently produced the largest data transfers
+- DNS was the most frequent protocol but carried significantly smaller payloads
+
+---
+
+## 🗺️ Roadmap
+
+| # | Project | Status |
+|---|---|---|
+| 01 | Network Intrusion Log Analysis | ✅ Complete |
+| 02 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
+| 03 | Malware Traffic Classification | 🔜 Upcoming |
+| 04 | Threat Intelligence Analysis | 🔜 Upcoming |
+
+---
+
+## ⚙️ How to Run
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/cangmaongarvin-wq/portfolio-projects-vin.git
+   cd portfolio-projects-vin
+   ```
+
+2. Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Launch the notebook
+   ```bash
+   jupyter notebook portfolio/network_log_analysis.ipynb
+   ```
+
+---
+
+## 📦 Requirements
+
+```
+pandas
+numpy
+jupyter
+```
+
+---
+
+## 👤 About
+
+**Arvin**
+Aspiring Cybersecurity Data Scientist | Currently training in Python Data Analytics via DataCamp
+
+[GitHub](https://github.com/cangmaongarvin-wq) · [LinkedIn](https://www.linkedin.com/in/acangmaong/)
+```
