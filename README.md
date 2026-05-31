@@ -11,12 +11,14 @@ with projects developed alongside my Data Analytics training on DataCamp.
 ```
 portfolio-projects-vin/
 │
-├── portfolio/                        # Polished project notebooks
-│   ├── 01_network_log_analysis/
-│   │   ├── network_log_analysis.ipynb
-│   │   └── data/
-│   │       └── network_logs.csv
-│   └── ... (more projects coming)
+├── portfolio/
+|   ├── 01_network_log_analysis/
+│   |   ├── network_log_analysis.ipynb
+│   |   └── data/
+│   |        └── network_logs.csv
+|   |
+|   └── 02_ip_watchlist_manager/
+|       └── ip_watchlist_manager.py
 │
 ├── README.md
 └── requirements.txt
@@ -67,7 +69,7 @@ portfolio-projects-vin/
 - Input validation and error handling throughout
 
 **What I learned:**
-- If your script has options that were coded with `if-elif-else` conditions,always `if` on the first option and `elif` on subsequents.
+- If your script has options that were coded with `if-elif-else` conditions, always `if` on the first option and `elif` on subsequents.
 
 **What I could've added:**
 - I know there's a function to make the screen change for every option and not print them out everytime the loop resets but, I don't know how to do it and won't be adding it for the sake of a progress-driven portfolio.
