@@ -67,4 +67,4 @@ while True:
             print("Not in Watchlist.\n")
 
     else:
-        print("Invalid option. PLease choose 1-4 or Q (for quit).")
+        print("Invalid option. Please choose 1-4 or Q (for quit).")
