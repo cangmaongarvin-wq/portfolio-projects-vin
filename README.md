@@ -52,14 +52,38 @@ portfolio-projects-vin/
 
 ---
 
+### 2. IP Watchlist Manager
+> A command-line IP watchlist manager built using Python lists and control flow — simulating a basic SOC analyst tool.
+
+| | |
+|---|---|
+| **File** | `portfolio/02_ip_watchlist_manager/ip_watchlist_manager.py` |
+| **Tools** | Python, lists, loops, conditionals, error handling |
+
+**What this project covers:**
+- Interactive CLI menu using `while True` loop
+- Smart add/remove logic based on IP presence
+- Replace existing IPs using `.index()`
+- Input validation and error handling throughout
+
+**What I learned:**
+- If your script has options that were coded with `if-elif-else` conditions,always `if` on the first option and `elif` on subsequents.
+
+**What I could've added:**
+- I know there's a function to make the screen change for every option and not print them out everytime the loop resets but, I don't know how to do it and won't be adding it for the sake of a progress-driven portfolio.
+- I also noticed options 2 and 3 don't have a block for incorrect input value. For example, option 2 would ask you to enter an IP and would still continue even if you entered a text or other value than an IP. I'll consider this on future projects.
+
+---
+
 ## 🗺️ Roadmap
 
 | # | Project | Status |
 |---|---|---|
 | 01 | Network Intrusion Log Analysis | ✅ Complete |
-| 02 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
-| 03 | Malware Traffic Classification | 🔜 Upcoming |
-| 04 | Threat Intelligence Analysis | 🔜 Upcoming |
+| 02 | IP Watchlist Manager | ✅ Complete |
+| 03 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
+| 04 | Malware Traffic Classification | 🔜 Upcoming |
+| 05 | Threat Intelligence Analysis | 🔜 Upcoming |
 
 ---
 
@@ -76,9 +100,14 @@ portfolio-projects-vin/
    pip install -r requirements.txt
    ```
 
-3. Launch the notebook
+3. Launch the network log analysis notebook
    ```bash
-   jupyter notebook portfolio/network_log_analysis.ipynb
+   jupyter notebook portfolio/01_network_log_analysis/network_log_analysis.ipynb
+   ```
+
+4. Run the IP watchlist manager
+   ```bash
+   python3 portfolio/02_ip_watchlist_manager/ip_watchlist_manager.py
    ```
 
 ---
