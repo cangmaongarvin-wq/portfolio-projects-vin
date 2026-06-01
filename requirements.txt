@@ -1,4 +1,13 @@
+# Project 1
 numpy==2.4.6
 pandas==3.0.3
 python-dateutil==2.9.0.post0
 six==1.17.0
+python==3.12.3
+
+# Project 2
+numpy==2.4.6
+pandas==3.0.3
+python-dateutil==2.9.0.post0
+six==1.17.0
+python==3.12.3
