@@ -17,9 +17,13 @@ portfolio-projects-vin/
 │   |   └── data/
 │   |        └── network_logs.csv
 |   |
-|   └── 02_ip_watchlist_manager/
-|       └── ip_watchlist_manager.py
-│
+|   ├── 02_ip_watchlist_manager/
+|   |   └── ip_watchlist_manager.py
+|   |
+|   └── 03_threat_record_manager/
+|       ├── threat_record_manager.ipynb
+|       └── threat_record_manager.py
+|
 ├── README.md
 └── requirements.txt
 ```
@@ -33,7 +37,7 @@ portfolio-projects-vin/
 
 | | |
 |---|---|
-| **Notebook** | `portfolio/network_log_analysis.ipynb` |
+| **Notebook** | `portfolio/01_network_log_analysis/network_log_analysis.ipynb` |
 | **Dataset** | Synthetic network log (20 events, 8 features) |
 | **Tools** | Python, pandas, numpy, Jupyter |
 
@@ -77,40 +81,77 @@ portfolio-projects-vin/
 
 ---
 
+### 3. Threat Record Manager
+> A CLI threat intelligence record manager simulating SOC analyst workflows — built using Python dictionaries and control flow.
+
+| | |
+|---|---|
+| **Script** | `portfolio/03_threat_record_manager/threat_record_manager.py` |
+| **Notebook** | `portfolio/03_threat_record_manager/threat_record_manager.ipynb` |
+| **Tools** | Python, dictionaries, os module, loops, error handling |
+
+**What this project covers:**
+- Full CRUD operations on a Python dictionary
+- Smart update flow — change value, rename key, or both independently
+- Input validation and cancel-at-any-step UX with 'q'
+- Cross-platform terminal screen control using the os module
+- Documented evolution from initial build to final version in the notebook
+
+**What I added:**
+- Implemented `clear_screen()` using the `os` module in Project 3 to solve this exact problem.
+- Added blocks for incorrect input values on all options.
+
+---
+
 ## 🗺️ Roadmap
 
 | # | Project | Status |
 |---|---|---|
 | 01 | Network Intrusion Log Analysis | ✅ Complete |
 | 02 | IP Watchlist Manager | ✅ Complete |
-| 03 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
-| 04 | Malware Traffic Classification | 🔜 Upcoming |
-| 05 | Threat Intelligence Analysis | 🔜 Upcoming |
+| 03 | Threat Record Manager | ✅ Complete |
+| 04 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
+| 05 | Malware Traffic Classification | 🔜 Upcoming |
+| 06 | Threat Intelligence Analysis | 🔜 Upcoming |
 
 ---
 
 ## ⚙️ How to Run
 
 1. Clone the repository
-   ```bash
+```bash
    git clone https://github.com/cangmaongarvin-wq/portfolio-projects-vin.git
    cd portfolio-projects-vin
-   ```
+```
 
 2. Install dependencies
-   ```bash
+```bash
    pip install -r requirements.txt
-   ```
+```
 
 3. Launch the network log analysis notebook
-   ```bash
+```bash
    jupyter notebook portfolio/01_network_log_analysis/network_log_analysis.ipynb
-   ```
+```
 
 4. Run the IP watchlist manager
-   ```bash
+```bash
    python3 portfolio/02_ip_watchlist_manager/ip_watchlist_manager.py
-   ```
+```
+
+5. Launch the threat record manager notebook
+```bash
+   jupyter notebook portfolio/03_threat_record_manager/threat_record_manager.ipynb
+```
+   Once the notebook opens:
+   1. Click the "Run" menu at the top
+   2. Select "Render All Markdown Cells"
+   Note: This notebook contains interactive CLI code using input() which cannot run inside Jupyter. Rendering markdown cells only displays the documentation without executing the code.
+
+6. Run the Threat Record Manager
+```bash
+   python3 portfolio/03_threat_record_manager/threat_record_manager.py
+```
 
 ---
 
