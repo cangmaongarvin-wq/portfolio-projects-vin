@@ -146,7 +146,8 @@ portfolio-projects-vin/
    Once the notebook opens:
    1. Click the "Run" menu at the top
    2. Select "Render All Markdown Cells"
-   Note: This notebook contains interactive CLI code using input() which cannot run inside Jupyter. Rendering markdown cells only displays the documentation without executing the code.
+      
+   > **Note:** This notebook contains interactive CLI code using `input()` which cannot run inside Jupyter. Rendering markdown cells only displays the documentation without executing the code.
 
 6. Run the Threat Record Manager
 ```bash
