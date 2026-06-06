@@ -21,8 +21,13 @@ portfolio-projects-vin/
 |   |   └── ip_watchlist_manager.py
 |   |
 |   └── 03_threat_record_manager/
-|       ├── threat_record_manager.ipynb
-|       └── threat_record_manager.py
+|   |    ├── threat_record_manager.ipynb
+|   |    └── threat_record_manager.py
+|   |
+|   └── 04_daily_ip_alert_comparator/
+|       ├── daily_ip_alert_comparator.py
+|       ├── daily_ip_alert_comparator.ipynb
+|       └── logs.json
 |
 ├── README.md
 └── requirements.txt
@@ -103,6 +108,36 @@ portfolio-projects-vin/
 
 ---
 
+### 4. Daily IP Alert Comparator
+> A CLI threat intelligence tool that compares network logs between two days to surface new, persistent, and resolved threats — built using Python sets, JSON, and the rich library for formatted output.
+
+| | |
+|---|---|
+| **Script** | `portfolio/04_daily_ip_alert_comparator/daily_ip_alert_comparator.py` |
+| **Notebook** | `portfolio/04_daily_ip_alert_comparator/daily_ip_alert_comparator.ipynb` |
+| **Data** | `portfolio/04_daily_ip_alert_comparator/logs.json` |
+| **Tools** | Python, sets, tuples, JSON, rich, os module |
+
+**What this project covers:**
+- Loading and parsing threat data from a JSON file
+- Set operations to identify new, persistent, resolved, and combined threats
+- Three-tier alert threshold system using tuple unpacking
+- Color-coded terminal output using the `rich` library
+- Cross-platform screen clearing using the `os` module
+
+**Key Output:**
+- 🔴 New Alerts — IPs seen today but not yesterday
+- 🟡 Persistent Threats — IPs seen on both days
+- 🟢 Resolved Threats — IPs seen yesterday but not today
+- Total unique IPs tracked across both days
+
+**What I could've added:**
+- **Error Handling (`try/except`)** — catching missing or corrupted `logs.json` files so the script doesn't crash unexpectedly
+- **Exporting Reports** — saving the rich table output to `.txt` or `.html` so analysts can share results via email
+- **Historical Logging** — appending daily results to a master log file to track threat trends over a 30-day period instead of just 48 hours
+
+---
+
 ## 🗺️ Roadmap
 
 | # | Project | Status |
@@ -110,9 +145,10 @@ portfolio-projects-vin/
 | 01 | Network Intrusion Log Analysis | ✅ Complete |
 | 02 | IP Watchlist Manager | ✅ Complete |
 | 03 | Threat Record Manager | ✅ Complete |
-| 04 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
-| 05 | Malware Traffic Classification | 🔜 Upcoming |
-| 06 | Threat Intelligence Analysis | 🔜 Upcoming |
+| 04 | Daily IP Alert Comparator | ✅ Complete |
+| 05 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
+| 06 | Malware Traffic Classification | 🔜 Upcoming |
+| 07 | Threat Intelligence Analysis | 🔜 Upcoming |
 
 ---
 
@@ -154,21 +190,41 @@ portfolio-projects-vin/
    python3 portfolio/03_threat_record_manager/threat_record_manager.py
 ```
 
+7. Launch the threat record manager notebook
+```bash
+   jupyter notebook portfolio/04_daily_IP_alert_comparator/daily_ip_alert_comparator.ipynb
+```
+
+8. Run the Daily IP Alert Comparator
+```bash
+   python3 portfolio/04_daily_ip_alert_comparator/daily_ip_alert_comparator.py
+```
 ---
 
 ## 📦 Requirements
 
 ```
-pandas
-numpy
-jupyter
+# Core dependencies
+numpy==2.4.6
+pandas==3.0.3
+rich==15.0.0
+
+# Jupyter
+jupyter==1.1.1
+jupyterlab==4.5.7
+jupyter-console==6.6.3
+jupyter_client==8.8.0
+jupyter_core==5.9.1
+jupyter_server==2.18.2
+
+# Python version: 3.12.3
 ```
 
 ---
 
 ## 👤 About
 
-**Arvin**
+**Arvin Cangmaong**
 Aspiring Cybersecurity Data Scientist | Currently training in Python Data Analytics via DataCamp
 
 [GitHub](https://github.com/cangmaongarvin-wq) · [LinkedIn](https://www.linkedin.com/in/acangmaong/)
