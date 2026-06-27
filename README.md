@@ -25,10 +25,18 @@ portfolio-projects-vin/
 |   |    └── threat_record_manager.py
 |   |
 |   └── 04_daily_ip_alert_comparator/
-|       ├── daily_ip_alert_comparator.py
-|       ├── daily_ip_alert_comparator.ipynb
-|       └── logs.json
-|
+|   |   ├── daily_ip_alert_comparator.py
+|   |   ├── daily_ip_alert_comparator.ipynb
+|   |   └── logs.json
+|   |
+|   └── 05_meridian_logs_analysis/
+|       ├── meridian_login_analysis.py
+|       ├── meridian_login_analysis.ipynb
+|       ├── meridian_logs.csv
+|       ├── soc_triage_report.html
+|       ├── soc_triage_report.txt
+|       └── suspicious_findings.csv
+| 
 ├── README.md
 └── requirements.txt
 ```
@@ -138,6 +146,28 @@ portfolio-projects-vin/
 
 ---
 
+### 5. Meridian Login Analysis — SOC Triage
+> A Python-based threat intelligence tool that parses login events, filters out baseline security noise, and dynamically profiles brute-force attacks to generate dark-mode HTML triage dashboards.
+
+| | |
+|---|---|
+| **Script** | `portfolio/05_meridian_login_analysis/soc_triage_report.py` |
+| **Notebook** | `portfolio/05_meridian_login_analysis/meridian_login_analysis.ipynb` |
+| **Tools** | Python, CSV module, Dictionaries, Sets, Rich library |
+
+**What this project covers:**
+- Safe file stream handling using Python context managers (`with open()`)
+- In-memory data structures (Dictionaries and Unique Set sets) to aggregate threat metadata
+- Conditional logic gates to establish attack volume thresholds (`ALERT_THRESHOLD = 5`)
+- Dynamic threat profiling to classify attacks as either *Isolated* or *Distributed* based on unique IP footprints
+- Building an automated UI reporting pipeline that outputs color-coded terminal tables, plain-text backups, and dark-mode dashboards simultaneously
+
+**Key Analysis Output:**
+- **Top Targeted Accounts Table:** Tracks and highlights the most heavily targeted usernames.
+- **Top Attacking IP Addresses Table:** Maps malicious host origins based on failed login volumes.
+- **Top Targeted Systems / Assets Table:** Visualizes corporate target vectors.
+- **Dynamic Forensic Audit Alert:** Instantly surfaces malicious footprints targeting critical infrastructure accounts (e.g., `admin`).
+
 ## 🗺️ Roadmap
 
 | # | Project | Status |
@@ -146,9 +176,9 @@ portfolio-projects-vin/
 | 02 | IP Watchlist Manager | ✅ Complete |
 | 03 | Threat Record Manager | ✅ Complete |
 | 04 | Daily IP Alert Comparator | ✅ Complete |
-| 05 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
-| 06 | Malware Traffic Classification | 🔜 Upcoming |
-| 07 | Threat Intelligence Analysis | 🔜 Upcoming |
+| 05 | Meridian Login Analysis — SOC Triage | ✅ Complete |
+| 06 | Milestone Project | 🔜 Upcoming |
+| 07 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
 
 ---
 
@@ -190,7 +220,7 @@ portfolio-projects-vin/
    python3 portfolio/03_threat_record_manager/threat_record_manager.py
 ```
 
-7. Launch the threat record manager notebook
+7. Launch the Daily IP Alert Comparator notebook
 ```bash
    jupyter notebook portfolio/04_daily_IP_alert_comparator/daily_ip_alert_comparator.ipynb
 ```
@@ -198,6 +228,15 @@ portfolio-projects-vin/
 8. Run the Daily IP Alert Comparator
 ```bash
    python3 portfolio/04_daily_ip_alert_comparator/daily_ip_alert_comparator.py
+```
+
+9. Launch the Meridian Login Analysis notebook
+```bash
+   jupyter notebook portfolio/05_meridian_login_analysis/meridian_login_analysis.ipynb
+```
+10. Run the Meridian Login Analysis
+```bash
+   python3 portfolio/05_meridian_login_analysis/meridian_login_analysis.py
 ```
 ---
 
@@ -219,7 +258,6 @@ jupyter_server==2.18.2
 
 # Python version: 3.12.3
 ```
-
 ---
 
 ## 👤 About
