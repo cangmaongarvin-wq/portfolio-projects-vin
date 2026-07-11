@@ -1,0 +1,25 @@
+╭─────────────────────────────────────────────────────────╮
+│         MILESTONE PROJECT — LOGIN DATA CLEANING         │
+╰─────────────────────────────────────────────────────────╯
+
+TOTAL ROWS READ:  8
+5 clean vs 3 flagged
+
+Clean data written to portfolio/milestone_project/clean_logins.csv
+
+DATA QUALITY REPORT
+--------------------------------------------------
+ Issue Type         Rows Affected 
+ Missing Fields                 2 
+ Invalid Ip                     0 
+ Invalid Timestamp              0 
+ Invalid Status                 1 
+ Duplicate                      0 
+--------------------------------------------------
+╭─────────────────────────────── Summary ───────────────────────────────╮
+│ Total Rows Processed: 8                                               │
+│ Clean Rows Written:   5 (62.5%)                                       │
+│ Flagged Rows:         3 (37.5%)                                       │
+│ (a flagged row is counted once here, even if it tripped multiple      │
+│ issue types above)                                                    │
+╰───────────────────────────────────────────────────────────────────────╯

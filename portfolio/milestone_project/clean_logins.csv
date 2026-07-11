@@ -1,0 +1,6 @@
+timestamp,user_id,ip_address,action,status
+2026-06-08 08:12:34,user_01,192.168.1.10,LOGIN,success
+2026-06-08 08:14:02,admin,10.0.0.5,LOGIN,failed
+2026-06-08 08:16:11,user_02,172.16.254.1,LOGOUT,success
+2026-06-08 08:18:00,user_01,192.168.1.10,LOGIN,success
+2026-06-08 08:19:45,admin,10.0.0.5,LOGIN,failed
