@@ -168,6 +168,33 @@ portfolio-projects-vin/
 - **Top Targeted Systems / Assets Table:** Visualizes corporate target vectors.
 - **Dynamic Forensic Audit Alert:** Instantly surfaces malicious footprints targeting critical infrastructure accounts (e.g., `admin`).
 
+---
+
+### 6. Milestone Project: Login Data Quality Cleaner
+> A batch Python script that reads a messy raw login export, flags rows with data quality problems, writes a clean CSV, and generates a data quality report for both terminal and file output.
+
+| | |
+|---|---|
+| **Script** | `portfolio/milestone_project/milestone_project.py` |
+| **Notebook** | `portfolio/milestone_project/milestone_project.ipynb` |
+| **Data** | `portfolio/milestone_project/messy_logins.csv` |
+| **Tools** | Python, csv module, datetime, rich |
+
+**What this project covers:**
+- Custom validation for IP addresses, timestamps, and status values, with no external regex or validation libraries
+- Duplicate detection using a rounded-timestamp key stored in a set, matching the same user and IP within a 1-minute window
+- Accepts multiple real-world timestamp formats in the same input file (standard, slash-date, and ISO with a Z suffix)
+- A normalize-and-write-back pattern: fields are cleaned for validation and the cleaned form is written back into the row before saving, so the output CSV is consistently formatted rather than just individually valid
+- A data quality report that counts each flagged row once overall, while still tracking how many rows fall into each issue type
+- Documented bug evolution in the notebook: a misspelled keyword argument, then three separate normalization gaps found by inspecting the actual output file rather than the code
+
+**Key Findings:**
+- 5 clean rows and 3 flagged rows out of 8 total, from a real messy login export
+- Flags broke down as 2 rows for missing fields (one blank IP, one blank timestamp) and 1 row for an unrecognized status value
+- No rows flagged for invalid IP, invalid timestamp, or duplicate login in this run, all three accepted timestamp formats parsed successfully, and the one repeated user and IP pair in the file fell outside the 1-minute duplicate window
+
+---
+
 ## 🗺️ Roadmap
 
 | # | Project | Status |
@@ -177,7 +204,7 @@ portfolio-projects-vin/
 | 03 | Threat Record Manager | ✅ Complete |
 | 04 | Daily IP Alert Comparator | ✅ Complete |
 | 05 | Meridian Login Analysis — SOC Triage | ✅ Complete |
-| 06 | Milestone Project | 🔜 Upcoming |
+| 06 | Milestone Project | ✅ Complete |
 | 07 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
 
 ---
@@ -238,6 +265,17 @@ portfolio-projects-vin/
 ```bash
    python3 portfolio/05_meridian_login_analysis/meridian_login_analysis.py
 ```
+
+11. Launch the Milestone Project notebook
+```bash
+   jupyter notebook portfolio/milestone_project/milestone_project.ipynb
+```
+
+12. Run the Milestone Project
+```bash
+   python3 portfolio/milestone_project/milestone_project.py
+```
+   > **Note:** Run this one from the repository root so the relative file paths inside the script resolve correctly.
 ---
 
 ## 📦 Requirements

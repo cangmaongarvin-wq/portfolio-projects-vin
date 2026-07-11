@@ -19,7 +19,7 @@ Last updated: by Arvin, ongoing
 | Data Structures — Tuples & Sets | ✅ Complete |
 | File I/O (text, CSV, JSON) | ✅ Complete |
 | Regex | ⬜ Not formally covered — being introduced naturally through SOC simulations |
-| Milestone Project | 🔄 In progress |
+| Milestone Project | ✅ Complete |
 
 ### Phase 2 — Data Manipulation Libraries
 | Topic | Status |
@@ -52,7 +52,14 @@ Last updated: by Arvin, ongoing
 | 03 | Threat Record Manager | dictionaries, CRUD, os module | ✅ Complete |
 | 04 | Daily IP Alert Comparator | sets, tuples, JSON, rich library | ✅ Complete |
 | 05 | Meridian Login Analysis | File I/O, CSV, SOC simulation, rich | ✅ Complete |
-| 06 | Milestone Project (messy CSV cleanup) | File I/O, data cleaning | 🔄 In progress |
+| 06 | Milestone Project (messy CSV cleanup) | File I/O, data cleaning, validation, normalization | ✅ Complete |
+
+**Milestone Project key decisions:**
+- Duplicate detection: same `user_id` + `ip_address` within a 1-minute window, via a `(user, ip, rounded_timestamp)` key stored in a `seen` set
+- Custom `is_valid_ip()` (4 parts, 0-255 each) and `is_valid_status()` (against a `VALID_STATUSES` set)
+- Accepts 3 real-world timestamp formats (`%Y-%m-%d %H:%M:%S`, `%d/%m/%Y %H:%M:%S`, `%Y-%m-%dT%H:%M:%SZ`)
+- Flagged rows excluded entirely from `clean_logins.csv`; a row is counted once in the total even if it trips multiple issue types, though each issue type's own count can still include that row
+- Normalize-and-write-back pattern: `user_id`, `status`, `ip_address`, and `timestamp` are all normalized for validation *and* written back into the row before saving, so the clean CSV doesn't just pass validation but is also formatted consistently (fixed inconsistent casing, whitespace, and 3 different timestamp formats coexisting in the same column)
 
 ---
 
@@ -76,9 +83,20 @@ These are habits established across all projects — keep consistent:
 ## 🐛 Debugging Habits Demonstrated
 
 - Catches own bugs before being told (e.g. `count`/`i` not resetting between loop runs, `clear_screen()` placement issues, missing `elif` for "no" responses)
-- Documents bug evolution in notebooks — Problem → Fix → Impact format
+- Documents bug evolution in companion notebooks using a unified format (see below)
 - Tests edge cases deliberately (invalid input, empty input, duplicate entries)
 - Asks "why" not just "what" — wants to understand root cause, not just apply the fix
+
+---
+
+## 📓 Notebook Documentation Standard
+
+Applies to every project notebook going forward; all five existing notebooks (01, 03, 04, 05, and the Milestone Project) were retrofitted to this format:
+
+- **Intro cell:** title (no emoji), one-line description, "What this does" bullet list, "Built with" tech stack line
+- **Iteration cells:** unified heading, either "Revision N: Bug Check - <label>" for actual bugs or "Revision N: Enhancement - <label>" for feature additions that weren't bugs, followed by what was found/why, then the fix, then the updated code cell
+- **Closing section:** every notebook ends with a findings/takeaways section in analyst-facing prose, grounded in the tool's actual output, not just a bullet dump of implementation details
+- No trailing empty cells; no emojis or em-dashes anywhere in notebook markdown
 
 ---
 
@@ -99,11 +117,9 @@ escalating in complexity as more skills are learned.
 
 ## 🔜 Immediate Next Steps
 
-1. Finish Phase 1 Milestone Project — clean a messy login CSV (filter 
-   missing timestamps, export clean version)
-2. Introduce Regex naturally through the next SOC simulation (log parsing)
-3. Move into Phase 2 — NumPy deep dive, missing value handling, visualization
-4. Consider adding password-protected access (`getpass` module) to a 
+1. Introduce Regex naturally through the next SOC simulation (log parsing)
+2. Move into Phase 2 — NumPy deep dive, missing value handling, visualization
+3. Consider adding password-protected access (`getpass` module) to a 
    future CLI tool — noted as a parked idea
 
 ---
