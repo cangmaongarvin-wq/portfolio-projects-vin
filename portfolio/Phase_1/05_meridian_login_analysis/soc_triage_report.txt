@@ -1,0 +1,34 @@
+╭──────────────────────────────────────────────────────╮
+│         MERIDIAN LOGIN ANALYSIS — SOC TRIAGE         │
+╰──────────────────────────────────────────────────────╯
+
+TOTAL LOGINS: 29
+ 6 Successful vs  23 Failed logins.
+
+SOC TRIAGE REPORT: TOP OFFENDERS & TARGETS
+--------------------------------------------------
+      Top Targeted Accounts      
+ Rank  Username   Total Failures 
+  1    'admin'                10 
+  2    'root'                  6 
+  3    'bwilson'               3 
+
+      Top Attacking IP Addresses       
+ Rank  IP Address       Total Failures 
+  1    '185.220.101.1'              10 
+  2    '10.0.0.99'                   6 
+  3    '198.51.100.23'               3 
+
+    Top Targeted Systems / Assets     
+ Rank  Host            Total Failures 
+  1    'Core Banking'              10 
+  2    'Database'                   6 
+  3    'VPN'                        3 
+==================================================
+╭──────────────────────────────────────────────────────── Forensic Audit Alert ─────────────────────────────────────────────────────────╮
+│ Threat Profile: CRITICAL ISOLATED ATTACK                                                                                              │
+│                                                                                                                                       │
+│ Account 'admin' was hammered 10 times!                                                                                                │
+│ Source Vector: Originated from 1 unique IP address(es).                                                                               │
+│ Rogue IP List: 185.220.101.1                                                                                                          │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

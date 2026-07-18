@@ -10,6 +10,8 @@ Last updated: by Arvin, ongoing
 
 ## 🗺️ Roadmap Status — Cybersecurity Data Scientist Path
 
+**Note on restructuring:** Statistics and SQL were originally later, sequential phases (old Phase 4 and Phase 3). Moved to run as parallel tracks alongside Phase 2 instead: missing-value handling and outlier detection depend directly on statistical concepts that hadn't been covered yet, and SQL concepts map closely onto pandas operations (filter/WHERE, groupby/GROUP BY, merge/JOIN) while pandas is still fresh. A Job-Ready Checkpoint was also added so applying for roles doesn't wait on the full roadmap finishing.
+
 ### Phase 1 — Python Essentials
 | Topic | Status |
 |---|---|
@@ -18,28 +20,40 @@ Last updated: by Arvin, ongoing
 | Data Structures — Dictionaries | ✅ Complete |
 | Data Structures — Tuples & Sets | ✅ Complete |
 | File I/O (text, CSV, JSON) | ✅ Complete |
-| Regex | ⬜ Not formally covered — being introduced naturally through SOC simulations |
+| Regex (character classes, quantifiers, anchors, capture groups) | ✅ Complete |
 | Milestone Project | ✅ Complete |
 
-### Phase 2 — Data Manipulation Libraries
+### Phase 2 — Data Analysis Core (three parallel tracks)
+
+**Track A — Data Manipulation**
 | Topic | Status |
 |---|---|
-| NumPy | 🔄 Touched briefly in Project 1 |
+| NumPy | ✅ Prior experience confirmed |
 | Pandas | ✅ Covered in Project 1 (filtering, sorting, groupby, agg, loc/iloc) |
-| Missing Value Handling | ⬜ Not yet covered |
-| Data Visualization (Matplotlib/Seaborn) | ⬜ Not yet covered |
+| Missing Value Handling | 🔄 In progress (Project 08) |
+| Data Visualization (Matplotlib) | 🔄 In progress (Project 08) |
 
-### Phase 3 — SQL & Structured Data
+**Track B — Applied Statistics**
+| Topic | Status |
+|---|---|
+| Descriptive statistics (mean, median, std) | ⬜ Not started |
+| Distributions & probability basics | ⬜ Not started |
+| Outlier detection (z-score, IQR) | ⬜ Not started |
+| Missingness types (MCAR / MAR / MNAR) | ⬜ Not started |
+
+**Track C — SQL & Structured Data**
+| Topic | Status |
+|---|---|
+| SQL fundamentals (SELECT, WHERE, JOIN, GROUP BY) | ⬜ Not started |
+
+### Job-Ready Checkpoint
+Once Phase 1 and Phase 2's tracks are solid, start applying for Junior Data Analyst roles using the existing portfolio, in parallel with continuing the phases below. Not gated behind full roadmap completion, since the long-term Cybersecurity Data Scientist goal (Phases 3+ below) is a 12-18 month horizon and shouldn't delay near-term applications.
+
+### Phase 3 — Machine Learning for Security
 ⬜ Not started
 
-### Phase 4 — Applied Mathematics & Statistics
-⬜ Not started
-
-### Phase 5 — Machine Learning for Security
-⬜ Not started
-
-### Phase 6 — Cybersecurity Domain Knowledge
-🔄 Picked up informally through SOC analyst simulation exercises (see below)
+### Cybersecurity Domain Knowledge
+Cross-cutting thread running through all phases via the SOC analyst simulation storyline (CyberShield Analytics / Meridian Bank), rather than a standalone sequential phase. This is intentional and working well, so it stays informal.
 
 ---
 
@@ -53,6 +67,8 @@ Last updated: by Arvin, ongoing
 | 04 | Daily IP Alert Comparator | sets, tuples, JSON, rich library | ✅ Complete |
 | 05 | Meridian Login Analysis | File I/O, CSV, SOC simulation, rich | ✅ Complete |
 | 06 | Milestone Project (messy CSV cleanup) | File I/O, data cleaning, validation, normalization | ✅ Complete |
+| 07 | Firewall Log Triage | Regex: character classes, quantifiers, anchors, capture groups | ✅ Complete |
+| 08 | Endpoint Health Monitoring | NumPy, pandas, missing value handling, matplotlib | 🔄 In progress |
 
 **Milestone Project key decisions:**
 - Duplicate detection: same `user_id` + `ip_address` within a 1-minute window, via a `(user, ip, rounded_timestamp)` key stored in a `seen` set
@@ -117,9 +133,13 @@ escalating in complexity as more skills are learned.
 
 ## 🔜 Immediate Next Steps
 
-1. Introduce Regex naturally through the next SOC simulation (log parsing)
-2. Move into Phase 2 — NumPy deep dive, missing value handling, visualization
-3. Consider adding password-protected access (`getpass` module) to a 
+1. Finish Project 08 (Endpoint Health Monitoring): missing value handling 
+   and visualization, Phase 2 Track A
+2. Begin Phase 2 Track B (Applied Statistics) and Track C (SQL) in parallel, 
+   not sequentially after Track A
+3. Revisit the Job-Ready Checkpoint once Phase 2's tracks are solid. Start 
+   applying for Junior Data Analyst roles without waiting on Phases 3+
+4. Consider adding password-protected access (`getpass` module) to a 
    future CLI tool — noted as a parked idea
 
 ---

@@ -2,7 +2,7 @@
 flagged_ips = ["185.220.101.1", "10.0.0.99", "45.33.32.156", "198.51.100.23"]
 
 while True:
-    print("\n" + "="*50)
+    print("="*50)
     print("="*14 + " IP WATCHLIST MANAGER " + "="*14)
     print("="*50)
     print(" [1] View Watchlist\n",
