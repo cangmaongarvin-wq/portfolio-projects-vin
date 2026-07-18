@@ -12,30 +12,45 @@ with projects developed alongside my Data Analytics training on DataCamp.
 portfolio-projects-vin/
 │
 ├── portfolio/
-|   ├── 01_network_log_analysis/
-│   |   ├── network_log_analysis.ipynb
-│   |   └── data/
-│   |        └── network_logs.csv
+|   ├── Phase_1/
+|   |   ├── 01_network_log_analysis/
+|   |   |   ├── network_log_analysis.ipynb
+|   |   |   └── data/
+|   |   |        └── network_logs.csv
+|   |   |
+|   |   ├── 02_ip_watchlist_manager/
+|   |   |   └── ip_watchlist_manager.py
+|   |   |
+|   |   ├── 03_threat_record_manager/
+|   |   |    ├── threat_record_manager.ipynb
+|   |   |    └── threat_record_manager.py
+|   |   |
+|   |   ├── 04_daily_ip_alert_comparator/
+|   |   |   ├── daily_ip_alert_comparator.py
+|   |   |   ├── daily_ip_alert_comparator.ipynb
+|   |   |   └── logs.json
+|   |   |
+|   |   ├── 05_meridian_login_analysis/
+|   |   |   ├── meridian_login_analysis.py
+|   |   |   ├── meridian_login_analysis.ipynb
+|   |   |   ├── meridian_logs.csv
+|   |   |   ├── soc_triage_report.html
+|   |   |   ├── soc_triage_report.txt
+|   |   |   └── suspicious_findings.csv
+|   |   |
+|   |   ├── milestone_project/
+|   |   |   ├── milestone_project.py
+|   |   |   ├── milestone_project.ipynb
+|   |   |   ├── messy_logins.csv
+|   |   |   ├── clean_logins.csv
+|   |   |   └── data_quality_report.txt
+|   |   |
+|   |   └── 07_firewall_log_triage/
+|   |       └── firewall_logs_raw.txt
 |   |
-|   ├── 02_ip_watchlist_manager/
-|   |   └── ip_watchlist_manager.py
-|   |
-|   └── 03_threat_record_manager/
-|   |    ├── threat_record_manager.ipynb
-|   |    └── threat_record_manager.py
-|   |
-|   └── 04_daily_ip_alert_comparator/
-|   |   ├── daily_ip_alert_comparator.py
-|   |   ├── daily_ip_alert_comparator.ipynb
-|   |   └── logs.json
-|   |
-|   └── 05_meridian_logs_analysis/
-|       ├── meridian_login_analysis.py
-|       ├── meridian_login_analysis.ipynb
-|       ├── meridian_logs.csv
-|       ├── soc_triage_report.html
-|       ├── soc_triage_report.txt
-|       └── suspicious_findings.csv
+|   └── Phase_2/
+|       └── 08_endpoint_health_monitoring/
+|           └── endpoint_health_raw.csv
 | 
 ├── README.md
 └── requirements.txt
@@ -50,7 +65,7 @@ portfolio-projects-vin/
 
 | | |
 |---|---|
-| **Notebook** | `portfolio/01_network_log_analysis/network_log_analysis.ipynb` |
+| **Notebook** | `portfolio/Phase_1/01_network_log_analysis/network_log_analysis.ipynb` |
 | **Dataset** | Synthetic network log (20 events, 8 features) |
 | **Tools** | Python, pandas, numpy, Jupyter |
 
@@ -76,7 +91,7 @@ portfolio-projects-vin/
 
 | | |
 |---|---|
-| **File** | `portfolio/02_ip_watchlist_manager/ip_watchlist_manager.py` |
+| **File** | `portfolio/Phase_1/02_ip_watchlist_manager/ip_watchlist_manager.py` |
 | **Tools** | Python, lists, loops, conditionals, error handling |
 
 **What this project covers:**
@@ -99,8 +114,8 @@ portfolio-projects-vin/
 
 | | |
 |---|---|
-| **Script** | `portfolio/03_threat_record_manager/threat_record_manager.py` |
-| **Notebook** | `portfolio/03_threat_record_manager/threat_record_manager.ipynb` |
+| **Script** | `portfolio/Phase_1/03_threat_record_manager/threat_record_manager.py` |
+| **Notebook** | `portfolio/Phase_1/03_threat_record_manager/threat_record_manager.ipynb` |
 | **Tools** | Python, dictionaries, os module, loops, error handling |
 
 **What this project covers:**
@@ -121,9 +136,9 @@ portfolio-projects-vin/
 
 | | |
 |---|---|
-| **Script** | `portfolio/04_daily_ip_alert_comparator/daily_ip_alert_comparator.py` |
-| **Notebook** | `portfolio/04_daily_ip_alert_comparator/daily_ip_alert_comparator.ipynb` |
-| **Data** | `portfolio/04_daily_ip_alert_comparator/logs.json` |
+| **Script** | `portfolio/Phase_1/04_daily_ip_alert_comparator/daily_ip_alert_comparator.py` |
+| **Notebook** | `portfolio/Phase_1/04_daily_ip_alert_comparator/daily_ip_alert_comparator.ipynb` |
+| **Data** | `portfolio/Phase_1/04_daily_ip_alert_comparator/logs.json` |
 | **Tools** | Python, sets, tuples, JSON, rich, os module |
 
 **What this project covers:**
@@ -151,8 +166,8 @@ portfolio-projects-vin/
 
 | | |
 |---|---|
-| **Script** | `portfolio/05_meridian_login_analysis/soc_triage_report.py` |
-| **Notebook** | `portfolio/05_meridian_login_analysis/meridian_login_analysis.ipynb` |
+| **Script** | `portfolio/Phase_1/05_meridian_login_analysis/soc_triage_report.py` |
+| **Notebook** | `portfolio/Phase_1/05_meridian_login_analysis/meridian_login_analysis.ipynb` |
 | **Tools** | Python, CSV module, Dictionaries, Sets, Rich library |
 
 **What this project covers:**
@@ -175,9 +190,9 @@ portfolio-projects-vin/
 
 | | |
 |---|---|
-| **Script** | `portfolio/milestone_project/milestone_project.py` |
-| **Notebook** | `portfolio/milestone_project/milestone_project.ipynb` |
-| **Data** | `portfolio/milestone_project/messy_logins.csv` |
+| **Script** | `portfolio/Phase_1/milestone_project/milestone_project.py` |
+| **Notebook** | `portfolio/Phase_1/milestone_project/milestone_project.ipynb` |
+| **Data** | `portfolio/Phase_1/milestone_project/messy_logins.csv` |
 | **Tools** | Python, csv module, datetime, rich |
 
 **What this project covers:**
@@ -205,7 +220,9 @@ portfolio-projects-vin/
 | 04 | Daily IP Alert Comparator | ✅ Complete |
 | 05 | Meridian Login Analysis — SOC Triage | ✅ Complete |
 | 06 | Milestone Project | ✅ Complete |
-| 07 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
+| 07 | Firewall Log Triage (Regex) | ✅ Complete |
+| 08 | Endpoint Health Monitoring (NumPy/pandas, missing values, visualization) | 🔄 In progress |
+| 09 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
 
 ---
 
@@ -224,17 +241,17 @@ portfolio-projects-vin/
 
 3. Launch the network log analysis notebook
 ```bash
-   jupyter notebook portfolio/01_network_log_analysis/network_log_analysis.ipynb
+   jupyter notebook portfolio/Phase_1/01_network_log_analysis/network_log_analysis.ipynb
 ```
 
 4. Run the IP watchlist manager
 ```bash
-   python3 portfolio/02_ip_watchlist_manager/ip_watchlist_manager.py
+   python3 portfolio/Phase_1/02_ip_watchlist_manager/ip_watchlist_manager.py
 ```
 
 5. Launch the threat record manager notebook
 ```bash
-   jupyter notebook portfolio/03_threat_record_manager/threat_record_manager.ipynb
+   jupyter notebook portfolio/Phase_1/03_threat_record_manager/threat_record_manager.ipynb
 ```
    Once the notebook opens:
    1. Click the "Run" menu at the top
@@ -244,36 +261,36 @@ portfolio-projects-vin/
 
 6. Run the Threat Record Manager
 ```bash
-   python3 portfolio/03_threat_record_manager/threat_record_manager.py
+   python3 portfolio/Phase_1/03_threat_record_manager/threat_record_manager.py
 ```
 
 7. Launch the Daily IP Alert Comparator notebook
 ```bash
-   jupyter notebook portfolio/04_daily_IP_alert_comparator/daily_ip_alert_comparator.ipynb
+   jupyter notebook portfolio/Phase_1/04_daily_IP_alert_comparator/daily_ip_alert_comparator.ipynb
 ```
 
 8. Run the Daily IP Alert Comparator
 ```bash
-   python3 portfolio/04_daily_ip_alert_comparator/daily_ip_alert_comparator.py
+   python3 portfolio/Phase_1/04_daily_ip_alert_comparator/daily_ip_alert_comparator.py
 ```
 
 9. Launch the Meridian Login Analysis notebook
 ```bash
-   jupyter notebook portfolio/05_meridian_login_analysis/meridian_login_analysis.ipynb
+   jupyter notebook portfolio/Phase_1/05_meridian_login_analysis/meridian_login_analysis.ipynb
 ```
 10. Run the Meridian Login Analysis
 ```bash
-   python3 portfolio/05_meridian_login_analysis/meridian_login_analysis.py
+   python3 portfolio/Phase_1/05_meridian_login_analysis/meridian_login_analysis.py
 ```
 
 11. Launch the Milestone Project notebook
 ```bash
-   jupyter notebook portfolio/milestone_project/milestone_project.ipynb
+   jupyter notebook portfolio/Phase_1/milestone_project/milestone_project.ipynb
 ```
 
 12. Run the Milestone Project
 ```bash
-   python3 portfolio/milestone_project/milestone_project.py
+   python3 portfolio/Phase_1/milestone_project/milestone_project.py
 ```
    > **Note:** Run this one from the repository root so the relative file paths inside the script resolve correctly.
 ---
