@@ -49,8 +49,28 @@ Last updated: by Arvin, ongoing
 ### Job-Ready Checkpoint
 Once Phase 1 and Phase 2's tracks are solid, start applying for Junior Data Analyst roles using the existing portfolio, in parallel with continuing the phases below. Not gated behind full roadmap completion, since the long-term Cybersecurity Data Scientist goal (Phases 3+ below) is a 12-18 month horizon and shouldn't delay near-term applications.
 
-### Phase 3 — Machine Learning for Security
+### Phase 3A — Security Operations & Detection Analytics
 ⬜ Not started
+
+**Focus areas**
+- Security telemetry (Windows Event Logs, Linux logs, Sysmon, network telemetry)
+- Detection engineering (detection logic, rule tuning, false positives, log correlation)
+- Threat hunting (hypothesis-driven investigations, IOC enrichment, MITRE ATT&CK mapping)
+- SIEM workflows (querying, dashboards, alert triage, incident timelines)
+
+**Roadmap note:** This phase builds directly on the SOC analyst simulation storyline established in Projects 05–08. The goal is to evolve from log analysis and data quality into detection engineering and security operations before introducing machine learning techniques.
+
+### Phase 3B — Machine Learning for Security
+⬜ Not started
+
+**Focus areas**
+- Feature engineering for security telemetry
+- Classification
+- Anomaly detection
+- Clustering
+- Time-series analysis
+
+**Note:** Phase 3B intentionally follows Phase 3A. Effective machine learning for security depends on understanding security telemetry, detection logic, and analyst workflows first.
 
 ### Cybersecurity Domain Knowledge
 Cross-cutting thread running through all phases via the SOC analyst simulation storyline (CyberShield Analytics / Meridian Bank), rather than a standalone sequential phase. This is intentional and working well, so it stays informal.
@@ -137,8 +157,7 @@ escalating in complexity as more skills are learned.
    and visualization, Phase 2 Track A
 2. Begin Phase 2 Track B (Applied Statistics) and Track C (SQL) in parallel, 
    not sequentially after Track A
-3. Revisit the Job-Ready Checkpoint once Phase 2's tracks are solid. Start 
-   applying for Junior Data Analyst roles without waiting on Phases 3+
+3. Revisit the Job-Ready Checkpoint after completing the core learning objectives of all three Phase 2 tracks (Data Manipulation, Applied Statistics, and SQL). Begin applying for Junior Data Analyst roles while continuing through Phases 3A and 3B.
 4. Consider adding password-protected access (`getpass` module) to a 
    future CLI tool — noted as a parked idea
 
