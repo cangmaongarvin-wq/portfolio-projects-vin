@@ -210,6 +210,34 @@ portfolio-projects-vin/
 
 ---
 
+### 7. Endpoint Health Anomaly Detection
+
+> A pandas-based anomaly detection tool that flags CPU usage spikes across a 5-server fleet using per-server statistical baselines, then investigates the servers with the most significant patterns against memory and network data.
+
+| | |
+|---|---|
+| **Script** |`portfolio/Phase_2/08_endpoint_health.py` |
+| **Notebook** | `portfolio/Phase_2/08_endpoint_health_anomaly_detection.ipynb` |
+| **Dataset** | `endpoint_health_raw.csv`, 5 servers, hourly readings over roughly 3 weeks |
+| **Tools** | Python, pandas, matplotlib
+
+**What this project covers:**
+
+- Correcting physically impossible negative `memory gb` readings by treating them as missing data before filling
+- Missing value handling across cpu_percent, memory_gb, and network_mbps using forward fill
+- Per-server anomaly detection using a mean + 2 standard deviation threshold, with a z-score-based severity column (sever if z >= 3, else borderline)
+- Fleet-wide triage using `groupby().transform()` to apply the per-server threshold across all 5 servers at once
+- Verifying an isolated anomaly against the full fleet before drawing conclusions, rather than assuming isolation
+
+**Key Findings:**
+
+- srv-app-02 logged 6 severe anomalies in a sustained 5-hour CPU-only plateau, with memory and network flat throughout, making it the priority for follow-up
+- srv-web-02 showed 2 severe plus 1 borderline isolated spikes, each single-hour, with a network-driven rather than CPU-driven signature
+- srv-app-01 had 1 severe isolated spike, confirmed isolated against the full fleet at that timestamp
+- srv-db-01 and srv-web-01 had borderline-only anomalies (9 and 17), scattered with no clustering, read as statistical noise
+
+---
+
 ## 🗺️ Roadmap
 
 | # | Project | Status |
@@ -221,7 +249,7 @@ portfolio-projects-vin/
 | 05 | Meridian Login Analysis — SOC Triage | ✅ Complete |
 | 06 | Milestone Project | ✅ Complete |
 | 07 | Firewall Log Triage (Regex) | ✅ Complete |
-| 08 | Endpoint Health Monitoring (NumPy/pandas, missing values, visualization) | 🔄 In progress |
+| 08 | Endpoint Health Monitoring (NumPy/pandas, missing values, visualization) | ✅ Complete |
 | 09 | Intrusion Detection EDA (NSL-KDD dataset) | 🔜 Upcoming |
 
 ---

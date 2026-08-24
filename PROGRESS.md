@@ -30,8 +30,8 @@ Last updated: by Arvin, ongoing
 |---|---|
 | NumPy | ✅ Prior experience confirmed |
 | Pandas | ✅ Covered in Project 1 (filtering, sorting, groupby, agg, loc/iloc) |
-| Missing Value Handling | 🔄 In progress (Project 08) |
-| Data Visualization (Matplotlib) | 🔄 In progress (Project 08) |
+| Missing Value Handling | ✅ Complete (Project 08) |
+| Data Visualization (Matplotlib) | ✅ Complete (Project 08) |
 
 **Track B — Applied Statistics**
 | Topic | Status |
@@ -88,7 +88,7 @@ Cross-cutting thread running through all phases via the SOC analyst simulation s
 | 05 | Meridian Login Analysis | File I/O, CSV, SOC simulation, rich | ✅ Complete |
 | 06 | Milestone Project (messy CSV cleanup) | File I/O, data cleaning, validation, normalization | ✅ Complete |
 | 07 | Firewall Log Triage | Regex: character classes, quantifiers, anchors, capture groups | ✅ Complete |
-| 08 | Endpoint Health Monitoring | NumPy, pandas, missing value handling, matplotlib | 🔄 In progress |
+| 08 | Endpoint Health Monitoring | NumPy, pandas, missing value handling, matplotlib | ✅ Complete |
 
 **Milestone Project key decisions:**
 - Duplicate detection: same `user_id` + `ip_address` within a 1-minute window, via a `(user, ip, rounded_timestamp)` key stored in a `seen` set
@@ -153,12 +153,10 @@ escalating in complexity as more skills are learned.
 
 ## 🔜 Immediate Next Steps
 
-1. Finish Project 08 (Endpoint Health Monitoring): missing value handling 
-   and visualization, Phase 2 Track A
-2. Begin Phase 2 Track B (Applied Statistics) and Track C (SQL) in parallel, 
+1. Begin Phase 2 Track B (Applied Statistics) and Track C (SQL) in parallel, 
    not sequentially after Track A
-3. Revisit the Job-Ready Checkpoint after completing the core learning objectives of all three Phase 2 tracks (Data Manipulation, Applied Statistics, and SQL). Begin applying for Junior Data Analyst roles while continuing through Phases 3A and 3B.
-4. Consider adding password-protected access (`getpass` module) to a 
+2. Revisit the Job-Ready Checkpoint after completing the core learning objectives of all three Phase 2 tracks (Data Manipulation, Applied Statistics, and SQL). Begin applying for Junior Data Analyst roles while continuing through Phases 3A and 3B.
+3. Consider adding password-protected access (`getpass` module) to a 
    future CLI tool — noted as a parked idea
 
 ---
